@@ -20,4 +20,5 @@ if (gender === 'Otro' && parsedAge < 18) {
 }
 if (gender === 'Otro' && parsedAge > 18) {
   console.log('Sx. Usted es MAYOR de edad y puede ingresar al sitio')
-}  
+}
+

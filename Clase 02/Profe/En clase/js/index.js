@@ -1,16 +1,5 @@
 // 1. Condicionales
 // - ìf
-<<<<<<< HEAD
-/*
-var name = prompt('Ingresa tu nombre')
-if (name) {
-  console.log('Hola ' + name)
-} else {
-  name = prompt('Esta vez escribilo')
-}
-
-// - switch
-=======
 
 console.log('Init app')
 
@@ -41,32 +30,9 @@ console.log('Init app')
 //     console.log('No escribiste nada dos veces!')
 //   }
 // }
->>>>>>> 70223bf5d19080af77cbf62a2a8f0daba3ed698a
 // 2. Operadores de comparación
 
 // - ===
-<<<<<<< HEAD
-var result = prompt('Ingrese resultado', 'Ganó, Empató o Perdió')
-
-if ('Ganó' === result) {
-  console.log('Sumaste 3 puntos')
-} else {
-  if ('Empató' === result) {
-    console.log('Sumaste 1 punto')
-  } else {
-    if ('Perdió' === result) {
-      console.log('Sumaste 0 puntos')
-    } else {
-      console.log('Resultado incorrecto')
-    }
-  }
-}
-*/
-
-// - !== (Estricto desigual, exactamente lo mismo que el === pero al reves)
-
-// - < 
-=======
 
 // var result = prompt('Ingrese resultado', 'Ganó, Empató o Perdió')
 
@@ -97,7 +63,6 @@ if ('Ganó' === result) {
 // }
 
 // - <
->>>>>>> 70223bf5d19080af77cbf62a2a8f0daba3ed698a
 // - >
 // - >=
 // - <=
