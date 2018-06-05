@@ -14,4 +14,5 @@ switch (dia) {
     break
   default:
     console.log('sos un gil')
+    break
 }
