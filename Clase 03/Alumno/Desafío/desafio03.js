@@ -20,8 +20,8 @@ switch (operation) {
       do {
         num3 = prompt('Ingrese otro número')
         parsedNum3 = parseFloat(num3, 10)
-        console.log(parsedNum1 / parsedNum3)
       } while (parsedNum3 === 0)
+      console.log(parsedNum1 / parsedNum3)
     } else {
       console.log(parsedNum1 / parsedNum2)
     } break
