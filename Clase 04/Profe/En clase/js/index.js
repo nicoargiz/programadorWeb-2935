@@ -131,6 +131,7 @@ console.log(cuadrado)
 //   var result = number1 * number1
 
 //   return result
+//   console.log('--------') // Código no alcanzado
 // }
 
 // function askAndParse (message) {
@@ -156,10 +157,17 @@ console.log(cuadrado)
 //   var student
 
 //   for (var i = 0; i < students.length; i++) {
-//     student = students[i]
+// student = students[i]
+
 //     console.log(student)
 //   }
 // }
+
+// var obj = {
+//   firstName: 'Pepe'
+// }
+
+// console.log(obj.firstName)
 
 // var student
 
