@@ -1,6 +1,7 @@
 console.log('Hola Tero')
 
 var examNotes = [7, 5, 6, 4, 3, 2, 8]
+var examNotes2 = [8, 25, 4, 3, 2, 8]
 
 
 function promedio(examResults) {
@@ -19,9 +20,11 @@ function promedio(examResults) {
 }
 
 var prom = promedio(examNotes)
-promedio(examNotes)
+var prom2 = promedio(examNotes2)
+
 
 console.log(prom)
+console.log(prom2)
 
 
 
