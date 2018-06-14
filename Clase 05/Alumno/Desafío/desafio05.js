@@ -28,7 +28,7 @@ function Student (firstName, lastName, dni, email) {
   }
 
   this.getFullName = function () {
-    return firstName + ' ' + lastName
+    return this.firstName + ' ' + this.lastName
   }
 }
 

@@ -27,7 +27,9 @@ function Car (model, brand, year) {
     return id
   }
   this.getCarName = function () {
-    return 'MODELO ' + model + ' MARCA  ' + brand + ' AÑO ' + year
+    return (
+      'MODELO ' + this.model + ' MARCA  ' + this.brand + ' AÑO ' + this.year
+    )
   }
 }
 
