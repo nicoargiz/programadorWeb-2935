@@ -13,13 +13,11 @@ console.log('Init app')
 // 1. Sentencias de blucle
 //  - while
 
-<<<<<<< HEAD
 // var counter = 1
 
 // while (counter <= 6) {
 //   console.log(counter)
 //   counter = counter + 1
-=======
 // console.log(1)
 // console.log(2)
 // console.log(3)
@@ -32,19 +30,16 @@ console.log('Init app')
 // while (couter <= 6) {
 //   console.log(couter)
 //   couter = couter + 1
->>>>>>> 687308a536ea71d06d2432b2601e1d840dbdebfa
 // }
 
 // var name = prompt('Ingrese su nombre')
 
-<<<<<<< HEAD
 // while (!name) {
 //   name = prompt('Ingrese su nombre')
 // }
 
 // console.log('Hola ' + name)
 
-=======
 // var parsedName = parseFloat(name, 10)
 
 // console.log(parsedName, isNaN(parsedName))
@@ -53,43 +48,34 @@ console.log('Init app')
 //   name = prompt('Ingrese su nombre')
 // }
 
->>>>>>> 687308a536ea71d06d2432b2601e1d840dbdebfa
 //  - do while
 
 // var name
 
 // do {
-<<<<<<< HEAD
 //   name = prompt('Ingrese su nombre')
 // } while (!name)
-=======
 //   name = prompt('Ingresá tu contraseña y que sea minímo 6 catacteres')
 // } while (!name || name.length < 6)
->>>>>>> 687308a536ea71d06d2432b2601e1d840dbdebfa
 
 // console.log('Hola ' + name)
 
 //  - for
 
-<<<<<<< HEAD
-=======
 // (i++) === (i = i + 1)
 
->>>>>>> 687308a536ea71d06d2432b2601e1d840dbdebfa
 // for (var i = 0; i < 3; i++) {
 //   console.log(i)
 // }
 
-<<<<<<< HEAD
-var students = ['Adrian', 'Javier', 'Alicia', 'Pepe']
-var = student
+var students = [ 'Adrian', 'Javier', 'Alicia', 'Pepe' ]
+var student
 
 for (var i = 0; i < students.length; i++) {
   student = students[i]
   console.log(student + ' es un alumno')
 }
 
-=======
 // console.log(students[0])
 // console.log(students[1])
 // console.log(students[2])
@@ -114,7 +100,6 @@ for (var i = 0; i < students.length; i++) {
 //     console.log(student + ' es un alumno')
 //   }
 // }
->>>>>>> 687308a536ea71d06d2432b2601e1d840dbdebfa
 
 // 2. Sentencias de corte
 //  - break

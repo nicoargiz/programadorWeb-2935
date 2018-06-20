@@ -22,5 +22,6 @@ function busqueda (buscaEsto, enEsto) {
 }
 
 console.log(busqueda('Pa', 'Patricia'))
+console.log(busqueda('pa', 'Patricia'))
 console.log(busqueda('Patricia', 'Pa'))
 console.log(busqueda(2, 'Pa'))
