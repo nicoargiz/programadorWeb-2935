@@ -29,10 +29,7 @@ var cualquiera = 718291
 function saveLocalList (llave, arreglo) {
   if (typeof llave === 'string' && Array.isArray(arreglo)) {
     var stringifyArreglo = JSON.stringify(arreglo)
-
     localStorage.setItem(llave, stringifyArreglo)
-  } else {
-    return console.log('Algo pusiste mal')
   }
 }
 
