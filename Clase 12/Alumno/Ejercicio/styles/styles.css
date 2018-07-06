@@ -27,3 +27,9 @@
   background-size: 200px 100px;
   background-position: top right;
 }
+
+.boton {
+  width: 100px;
+  background-color: red;
+  margin-left: 47%;
+}
