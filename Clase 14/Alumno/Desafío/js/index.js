@@ -1,7 +1,8 @@
 $(document).ready(function () {
+  var deleteButtonNode = $('#deleteButton')
   var tableNode = $('#tableBody')
 
-  tableNode.click(removeElementWithAnimation)
+  deleteButtonNode.click(removeElementWithAnimation)
 
   function removeElementWithAnimation (event) {
     tableNode.fadeOut(2000, removeFromDom)
