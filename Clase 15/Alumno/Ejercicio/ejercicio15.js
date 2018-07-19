@@ -1,13 +1,17 @@
 $(document).ready(function () {
-  var baseUrl = 'https://swapi.co/api/' + 'people/'
-  var people
+  var baseUrl = 'https://swapi.co/api/' + 'people/5'
 
-  getData(baseUrl, showCharacter)
+  getData(baseUrl, getInfo)
 
   function showCharacter (result) {
-    for (i = 0; i < result.length; i++) {
-      people = result[i]
-      console.log(people)
+    var character = result.name
+  }
+
+  function getInfo (error, data) {
+    if (!error) {
+      showCharacter(data.name)
+    } else {
+      console.log('Error', error)
     }
   }
 
