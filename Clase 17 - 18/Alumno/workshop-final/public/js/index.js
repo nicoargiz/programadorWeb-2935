@@ -198,13 +198,13 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ }),
 
 /***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
+/*!************************************************!*\
+  !*** ./node_modules/webpack/buildin/global.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn this;\n})();\n\ntry {\n\t// This works if eval is allowed (see CSP)\n\tg = g || Function(\"return this\")() || (1, eval)(\"this\");\n} catch (e) {\n\t// This works if the window reference is available\n\tif (typeof window === \"object\") g = window;\n}\n\n// g can still be undefined, but nothing to do about it...\n// We return undefined, instead of nothing here, so it's\n// easier to handle this case. if(!global) { ...}\n\nmodule.exports = g;\n\n\n//# sourceURL=webpack:///(webpack)/buildin/global.js?");
+eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn this;\n})();\n\ntry {\n\t// This works if eval is allowed (see CSP)\n\tg = g || Function(\"return this\")() || (1, eval)(\"this\");\n} catch (e) {\n\t// This works if the window reference is available\n\tif (typeof window === \"object\") g = window;\n}\n\n// g can still be undefined, but nothing to do about it...\n// We return undefined, instead of nothing here, so it's\n// easier to handle this case. if(!global) { ...}\n\nmodule.exports = g;\n\n\n//# sourceURL=webpack:///./node_modules/webpack/buildin/global.js?");
 
 /***/ }),
 
@@ -236,10 +236,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 /*!*************************************************!*\
   !*** ./src/js/controllers/contactController.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./src/js/controllers/contactController.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {function contactController () {\r\n  console.log('Soy el contact')\r\n\r\n  var firstNameInputNode = $('#firstName')\r\n  var emailInputNode = $('#email')\r\n  var commentsInputNode = $('#comments')\r\n  var submitButtonNode = $('#submitButton')\r\n\r\n  firstNameInputNode.one('blur', validateEmtpyField)\r\n\r\n  emailInputNode.one('blur', validateEmailField)\r\n\r\n  commentsInputNode.one('blur', validateEmtpyField)\r\n\r\n  function validateEmtpyField (event) {\r\n    var inputNode = $(this)\r\n\r\n    var errorText = ''\r\n    inputNode.next().remove()\r\n\r\n    if (!inputNode.val()) {\r\n      errorText = 'Campo requerido'\r\n    }\r\n\r\n    if (errorText) {\r\n      inputNode.addClass('is-invalid')\r\n      inputNode.removeClass('is-valid')\r\n\r\n      var parentNode = inputNode.parent()\r\n\r\n      parentNode.append('<div class=\"invalid-feedback\">' + errorText + '</div>')\r\n    } else {\r\n      inputNode.addClass('is-valid')\r\n      inputNode.removeClass('is-invalid')\r\n    }\r\n\r\n    if (event.type === 'blur') {\r\n      inputNode.on('input', validateEmtpyField)\r\n    }\r\n\r\n    validateButton()\r\n  }\r\n\r\n  function validateEmailField (event) {\r\n    var inputNode = $(this)\r\n\r\n    var errorText = ''\r\n\r\n    inputNode.next().remove()\r\n\r\n    var value = inputNode.val()\r\n\r\n    if (!value) {\r\n      errorText = errorText + 'Campo requerido '\r\n    } else {\r\n      if (value.indexOf('@') === -1) {\r\n        errorText = errorText + 'Debe contener arroba (@) '\r\n      }\r\n      if (value.indexOf('.') === -1) {\r\n        errorText = errorText + 'Debe contener punto (.) '\r\n      }\r\n    }\r\n\r\n    if (errorText) {\r\n      inputNode.addClass('is-invalid')\r\n      inputNode.removeClass('is-valid')\r\n\r\n      var parentNode = inputNode.parent()\r\n\r\n      parentNode.append('<div class=\"invalid-feedback\">' + errorText + '</div>')\r\n    } else {\r\n      inputNode.addClass('is-valid')\r\n      inputNode.removeClass('is-invalid')\r\n    }\r\n\r\n    if (event.type === 'blur') {\r\n      inputNode.on('input', validateEmailField)\r\n    }\r\n\r\n    validateButton()\r\n  }\r\n\r\n  function validateButton () {\r\n    var validInputNodes = $('.is-valid')\r\n\r\n    if (validInputNodes.length === 3) {\r\n      submitButtonNode.attr('disabled', false)\r\n    } else {\r\n      submitButtonNode.attr('disabled', true)\r\n    }\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (contactController);\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/controllers/contactController.js?");
 
 /***/ }),
 
@@ -255,6 +256,78 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction sayMyName () {\r\n  
 
 /***/ }),
 
+/***/ "./src/js/controllers/localStorageController.js":
+/*!******************************************************!*\
+  !*** ./src/js/controllers/localStorageController.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _utils_localStorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/localStorage */ \"./src/js/utils/localStorage.js\");\n/* harmony import */ var _utils_translates__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/translates */ \"./src/js/utils/translates.js\");\n/* harmony import */ var _utils_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/search */ \"./src/js/utils/search.js\");\n\r\n\r\n\r\n\r\n\r\n\r\nfunction localStorageController () {\r\n  console.log('Soy el localStorage')\r\n\r\n  var peopleList = Object(_utils_localStorage__WEBPACK_IMPORTED_MODULE_0__[\"getLocalList\"])('peopleList')\r\n\r\n  console.log(peopleList)\r\n\r\n  var tableBody = $('#tableBody')\r\n\r\n  for (var i = 0; i < peopleList.length; i++) {\r\n    var person = peopleList[i]\r\n\r\n    tableBody.append(\r\n      '<tr id=\"' +\r\n        person.url +\r\n        '\"><th scope=\"row\" >' +\r\n        person.url.slice(28, -1) +\r\n        '</th><td>' +\r\n        person.name +\r\n        '</td><td>' +\r\n        Object(_utils_translates__WEBPACK_IMPORTED_MODULE_1__[\"genderTranslate\"])(person.gender) +\r\n        '</td><td>' +\r\n        person.height +\r\n        ' cm</td><td>' +\r\n        person.mass +\r\n        ' kg</td><td>' +\r\n        Object(_utils_translates__WEBPACK_IMPORTED_MODULE_1__[\"eyeColorTranslate\"])(person.eye_color) +\r\n        '</td><td><button type=\"button\" class=\"btn btn-danger\">Eliminar</button></td></tr>'\r\n    )\r\n  }\r\n\r\n  $('.btn-danger').click(function () {\r\n    console.log('Me apretaron')\r\n    var buttonNode = $(this)\r\n\r\n    var rowNode = buttonNode.parent().parent()\r\n\r\n    var id = rowNode.attr('id')\r\n\r\n    var index = Object(_utils_search__WEBPACK_IMPORTED_MODULE_2__[\"searchPeopleIndexByUrl\"])(id, peopleList)\r\n\r\n    if (index !== -1) {\r\n      peopleList.splice(index, 1)\r\n\r\n      Object(_utils_localStorage__WEBPACK_IMPORTED_MODULE_0__[\"setLocalList\"])('peopleList', peopleList)\r\n\r\n      rowNode.remove()\r\n    }\r\n  })\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (localStorageController);\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/controllers/localStorageController.js?");
+
+/***/ }),
+
+/***/ "./src/js/controllers/peopleController.js":
+/*!************************************************!*\
+  !*** ./src/js/controllers/peopleController.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _utils_fromApi__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/fromApi */ \"./src/js/utils/fromApi.js\");\n/* harmony import */ var _utils_localStorage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/localStorage */ \"./src/js/utils/localStorage.js\");\n/* harmony import */ var _utils_translates__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/translates */ \"./src/js/utils/translates.js\");\n!(function webpackMissingModule() { var e = new Error(\"Cannot find module './utils/search'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nfunction peopleController () {\r\n  console.log('Soy People')\r\n\r\n  var peopleListArray = []\r\n\r\n  Object(_utils_fromApi__WEBPACK_IMPORTED_MODULE_0__[\"getData\"])('https://swapi.co/api/people/', getAllList)\r\n\r\n  function getAllList (error, data) {\r\n    if (data.results) {\r\n      showNames(data.results)\r\n      peopleListArray = peopleListArray.concat(peopleListArray, data.results)\r\n    }\r\n\r\n    if (data.next) {\r\n      $('#seeMore').one('click', function () {\r\n        Object(_utils_fromApi__WEBPACK_IMPORTED_MODULE_0__[\"getData\"])(data.next, getAllList)\r\n      })\r\n    }\r\n  }\r\n\r\n  var tableBody = $('#tableBody')\r\n\r\n  function showNames (results) {\r\n    for (var i = 0; i < results.length; i++) {\r\n      var person = results[i]\r\n\r\n      tableBody.append(\r\n        '<tr id=\"' +\r\n          person.url +\r\n          '\"><th scope=\"row\" >' +\r\n          person.url.slice(28, -1) +\r\n          '</th><td>' +\r\n          person.name +\r\n          '</td><td>' +\r\n          Object(_utils_translates__WEBPACK_IMPORTED_MODULE_2__[\"genderTranslate\"])(person.gender) +\r\n          '</td><td>' +\r\n          person.height +\r\n          ' cm</td><td>' +\r\n          person.mass +\r\n          ' kg</td><td>' +\r\n          Object(_utils_translates__WEBPACK_IMPORTED_MODULE_2__[\"eyeColorTranslate\"])(person.eye_color) +\r\n          '</td><td><button type=\"button\" class=\"btn btn-success\">Guardar</button></td></tr>'\r\n      )\r\n    }\r\n  }\r\n  $(document).on('click', '.btn-success', function () {\r\n    console.log('Me apretó')\r\n\r\n    var buttonNode = $(this)\r\n    var peopleList = Object(_utils_localStorage__WEBPACK_IMPORTED_MODULE_1__[\"getLocalList\"])('peopleList')\r\n    var rowNode = buttonNode.parent().parent()\r\n\r\n    var id = rowNode.attr('id')\r\n    var index = !(function webpackMissingModule() { var e = new Error(\"Cannot find module './utils/search'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(id, peopleListArray)\r\n\r\n    console.log(index)\r\n\r\n    if (index !== -1) {\r\n      peopleList.push(peopleListArray[index])\r\n\r\n      Object(_utils_localStorage__WEBPACK_IMPORTED_MODULE_1__[\"setLocalList\"])('peopleList', peopleList)\r\n\r\n      rowNode.remove()\r\n    }\r\n  })\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (peopleController);\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/controllers/peopleController.js?");
+
+/***/ }),
+
+/***/ "./src/js/utils/fromApi.js":
+/*!*********************************!*\
+  !*** ./src/js/utils/fromApi.js ***!
+  \*********************************/
+/*! exports provided: getData */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getData\", function() { return getData; });\nfunction getData (url, cbk) {\r\n  $.ajax(url)\r\n    .done(function (data) {\r\n      cbk(null, data)\r\n    })\r\n    .fail(function (error) {\r\n      cbk(error)\r\n    })\r\n}\r\n\r\n\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/utils/fromApi.js?");
+
+/***/ }),
+
+/***/ "./src/js/utils/localStorage.js":
+/*!**************************************!*\
+  !*** ./src/js/utils/localStorage.js ***!
+  \**************************************/
+/*! exports provided: getLocalList, setLocalList */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getLocalList\", function() { return getLocalList; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setLocalList\", function() { return setLocalList; });\n/**\r\n * La función getLocalList permite obtener una lista en formato\r\n * JavaScript del localStorage. Si la lista no existe devuelve un\r\n * array vacío.\r\n * @param { string } key \r\n * @returns { array }\r\n */\r\nfunction getLocalList (key) {\r\n  if (typeof key === 'string') {\r\n    var localList = localStorage.getItem(key)\r\n    if (localList) {\r\n      var parsedList = JSON.parse(localList)\r\n      return parsedList\r\n    } else {\r\n      return []\r\n    }\r\n  }\r\n}\r\n\r\n/**\r\n * La función setLocalList permite guardar una lista\r\n * en el localStorage en formato JSON\r\n * @param { string } key \r\n * @param { array } list \r\n */\r\nfunction setLocalList (key, list) {\r\n  if (typeof key === 'string' && Array.isArray(list)) {\r\n    var strList = JSON.stringify(list)\r\n    localStorage.setItem(key, strList)\r\n  }\r\n}\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/utils/localStorage.js?");
+
+/***/ }),
+
+/***/ "./src/js/utils/search.js":
+/*!********************************!*\
+  !*** ./src/js/utils/search.js ***!
+  \********************************/
+/*! exports provided: searchPeopleIndexByUrl */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"searchPeopleIndexByUrl\", function() { return searchPeopleIndexByUrl; });\nfunction searchPeopleIndexByUrl (url, peopleList) {\r\n  var index = -1\r\n  for (var i = 0; i < peopleList.length; i++) {\r\n    var person = peopleList[i]\r\n    if (person.url === url) {\r\n      index = i\r\n      break\r\n    }\r\n  }\r\n  return index\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/utils/search.js?");
+
+/***/ }),
+
+/***/ "./src/js/utils/translates.js":
+/*!************************************!*\
+  !*** ./src/js/utils/translates.js ***!
+  \************************************/
+/*! exports provided: genderTranslate, eyeColorTranslate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"genderTranslate\", function() { return genderTranslate; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"eyeColorTranslate\", function() { return eyeColorTranslate; });\nfunction genderTranslate (gender) {\r\n  switch (gender) {\r\n    case 'male':\r\n      return 'Masculino'\r\n      break\r\n    case 'female':\r\n      return 'Femenino'\r\n      break\r\n    case 'n/a':\r\n      return 'No aplica'\r\n      break\r\n    default:\r\n      return 'No se'\r\n      break\r\n  }\r\n}\r\n\r\nfunction eyeColorTranslate (eyeColor) {\r\n  switch (eyeColor) {\r\n    case 'blue':\r\n      return 'Azul'\r\n      break\r\n    case 'yellow':\r\n      return 'Amarillo'\r\n      break\r\n    case 'red':\r\n      return 'Rojo'\r\n      break\r\n    default:\r\n      return eyeColor\r\n      break\r\n  }\r\n}\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/utils/translates.js?");
+
+/***/ }),
+
 /***/ "./src/router.js":
 /*!***********************!*\
   !*** ./src/router.js ***!
@@ -263,7 +336,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction sayMyName () {\r\n  
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var crossroads__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! crossroads */ \"./node_modules/crossroads/dist/crossroads.js\");\n/* harmony import */ var crossroads__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(crossroads__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_controllers_homeController__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/controllers/homeController */ \"./src/js/controllers/homeController.js\");\n/* harmony import */ var _js_controllers_contactController__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/controllers/contactController */ \"./src/js/controllers/contactController.js\");\n/* harmony import */ var _js_controllers_contactController__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_controllers_contactController__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\n\r\n$(document).ready(function () {\r\n  console.log('Init app Workshop final')\r\n\r\n  crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.addRoute('#/people', function () {\r\n    $('#root').load('./partials/people.html', _js_controllers_contactController__WEBPACK_IMPORTED_MODULE_2___default.a)\r\n  })\r\n\r\n  crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.addRoute('/', function () {\r\n    $('#root').load('./partials/home.html', _js_controllers_homeController__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\n  })\r\n\r\n  // En cada cambio del # va a verificar las rutas\r\n  $(window).on('hashchange', function () {\r\n    crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.parse(window.location.hash)\r\n  })\r\n\r\n  crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.parse(window.location.hash)\r\n})\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/router.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var crossroads__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! crossroads */ \"./node_modules/crossroads/dist/crossroads.js\");\n/* harmony import */ var crossroads__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(crossroads__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _js_controllers_homeController__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/controllers/homeController */ \"./src/js/controllers/homeController.js\");\n/* harmony import */ var _js_controllers_peopleController__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/controllers/peopleController */ \"./src/js/controllers/peopleController.js\");\n/* harmony import */ var _js_controllers_localStorageController__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/controllers/localStorageController */ \"./src/js/controllers/localStorageController.js\");\n/* harmony import */ var _js_controllers_contactController__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/controllers/contactController */ \"./src/js/controllers/contactController.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n$(document).ready(function () {\r\n  console.log('Init app Workshop final 2')\r\n\r\n  crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.addRoute('#/contact', function () {\r\n    $('#root').load('./partials/contact.html', _js_controllers_contactController__WEBPACK_IMPORTED_MODULE_4__[\"default\"])\r\n  })\r\n\r\n  crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.addRoute('#/local-storage', function () {\r\n    $('#root').load('./partials/local-storage.html', _js_controllers_localStorageController__WEBPACK_IMPORTED_MODULE_3__[\"default\"])\r\n  })\r\n\r\n  crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.addRoute('#/people', function () {\r\n    $('#root').load('./partials/people.html', _js_controllers_peopleController__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\n  })\r\n\r\n  crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.addRoute('#/', function () {\r\n    $('#root').load('./partials/home.html', _js_controllers_homeController__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\n  })\r\n\r\n  // En cada cambio del # va a verificar las rutas\r\n  $(window).on('hashchange', function () {\r\n    crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.parse(window.location.hash)\r\n  })\r\n\r\n  crossroads__WEBPACK_IMPORTED_MODULE_0___default.a.parse(window.location.hash)\r\n})\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/router.js?");
 
 /***/ }),
 
@@ -274,7 +347,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! C:\\Users\\Compaq PC\\Desktop\\Coderhouse\\programadorWeb-2935\\Clase 17 - 18\\Alumno\\workshop-final/src/index.js */\"./src/index.js\");\n\n\n//# sourceURL=webpack:///multi_./src/index.js?");
+eval("module.exports = __webpack_require__(/*! C:\\Users\\Compaq PC\\desktop\\coderhouse\\programadorweb-2935\\clase 17 - 18\\alumno\\workshop-final/src/index.js */\"./src/index.js\");\n\n\n//# sourceURL=webpack:///multi_./src/index.js?");
 
 /***/ })
 
