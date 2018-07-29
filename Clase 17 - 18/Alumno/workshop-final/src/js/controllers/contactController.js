@@ -1,3 +1,5 @@
+import { postData } from '../utils/fromApi'
+
 function contactController () {
   console.log('Soy el contact')
 
@@ -89,6 +91,24 @@ function contactController () {
       submitButtonNode.attr('disabled', true)
     }
   }
+
+  submitButtonNode.click(function () {
+    var firstName = firstNameInputNode.val()
+    var emailInputNode = emailInputNode.val()
+    var commentsInputNode = commentsInputNode.val()
+
+    var data = {
+      firstName: firstName,
+      email: email,
+      comments: comments
+    }
+
+    postData('./simpleEmail.php', data, function (error, data) {
+      if (!error) {
+        window.location.hash = '#/contact/greetings'
+      }
+    })
+  })
 }
 
 export default contactController

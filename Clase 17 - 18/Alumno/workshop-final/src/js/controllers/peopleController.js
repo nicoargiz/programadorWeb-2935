@@ -4,7 +4,7 @@ import { setLocalList, getLocalList } from '../utils/localStorage'
 
 import { genderTranslate, eyeColorTranslate } from '../utils/translates'
 
-import { searchPeopleIndexByUrl } from './utils/search'
+import { searchPeopleIndexByUrl } from '../utils/search'
 
 function peopleController () {
   console.log('Soy People')

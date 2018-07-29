@@ -8,6 +8,10 @@ import contactController from './js/controllers/contactController'
 $(document).ready(function () {
   console.log('Init app Workshop final 2')
 
+  crossroads.addRoute('#/contact/greetings', function () {
+    $('#root').load('./partials/greetings.html')
+  })
+
   crossroads.addRoute('#/contact', function () {
     $('#root').load('./partials/contact.html', contactController)
   })
@@ -20,8 +24,8 @@ $(document).ready(function () {
     $('#root').load('./partials/people.html', peopleController)
   })
 
-  crossroads.addRoute('#/', function () {
-    $('#root').load('./partials/home.html', homeController)
+  crossroads.addRoute('/#', function () {
+    $('#root').load('./partials/home.html')
   })
 
   // En cada cambio del # va a verificar las rutas
